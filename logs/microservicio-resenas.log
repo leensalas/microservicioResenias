@@ -1,0 +1,2 @@
+2026-06-19T19:51:50.343-04:00  INFO 8648 --- [resenas] [main] com.resenas.resenas.ResenasApplication   : Starting ResenasApplication using Java 21.0.10 with PID 8648 (C:\Users\dynabook\Desktop\BiblioMusic\resenas\target\classes started by dynabook in C:\Users\dynabook\Desktop\BiblioMusic\resenas)
+2026-06-19T19:51:50.360-04:00  INFO 8648 --- [resenas] [main] com.resenas.resenas.ResenasApplication   : No active profile set, falling back to 1 default profile: "default"
