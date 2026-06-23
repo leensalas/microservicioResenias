@@ -1,2 +1,75 @@
 2026-06-19T19:51:50.343-04:00  INFO 8648 --- [resenas] [main] com.resenas.resenas.ResenasApplication   : Starting ResenasApplication using Java 21.0.10 with PID 8648 (C:\Users\dynabook\Desktop\BiblioMusic\resenas\target\classes started by dynabook in C:\Users\dynabook\Desktop\BiblioMusic\resenas)
 2026-06-19T19:51:50.360-04:00  INFO 8648 --- [resenas] [main] com.resenas.resenas.ResenasApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-06-19T19:51:51.873-04:00  INFO 8648 --- [resenas] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-19T19:51:52.029-04:00  INFO 8648 --- [resenas] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 119 ms. Found 1 JPA repository interface.
+2026-06-19T19:51:52.903-04:00  INFO 8648 --- [resenas] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8087 (http)
+2026-06-19T19:51:52.930-04:00  INFO 8648 --- [resenas] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-19T19:51:52.931-04:00  INFO 8648 --- [resenas] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-19T19:51:53.034-04:00  INFO 8648 --- [resenas] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2569 ms
+2026-06-19T19:51:53.406-04:00  INFO 8648 --- [resenas] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-19T19:51:54.229-04:00  INFO 8648 --- [resenas] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@388c519
+2026-06-19T19:51:54.232-04:00  INFO 8648 --- [resenas] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-19T19:51:56.511-04:00  INFO 8648 --- [resenas] [main] liquibase.ui                             : INFO: The drop-all command may result in unrecoverable destructive changes to objects at 'jdbc:mysql://localhost:3306/resenas?createDatabaseIfNotExist=true&serverTimezone=UTC'.
+To protect against unwanted drops, set --requireForce=true, which will require a --force=true flag on the command.
+Learn more at https://docs.liquibase.com/dropall.
+
+2026-06-19T19:51:56.635-04:00  INFO 8648 --- [resenas] [main] liquibase.snapshot                       : Creating snapshot
+2026-06-19T19:51:56.895-04:00  INFO 8648 --- [resenas] [main] liquibase.ui                             : Name 'PK_DATABASECHANGELOGLOCK' ignored for PRIMARY key.
+2026-06-19T19:51:56.928-04:00  INFO 8648 --- [resenas] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2026-06-19T19:51:56.938-04:00  INFO 8648 --- [resenas] [main] liquibase.command                        : Dropping Database Objects in schema: resenas.resenas
+2026-06-19T19:51:56.945-04:00  INFO 8648 --- [resenas] [main] liquibase.snapshot                       : Creating snapshot
+2026-06-19T19:51:57.154-04:00  INFO 8648 --- [resenas] [main] liquibase.snapshot                       : Creating snapshot
+2026-06-19T19:51:57.426-04:00  INFO 8648 --- [resenas] [main] liquibase.database                       : Successfully deleted all supported object types in schema resenas.resenas.
+2026-06-19T19:51:57.439-04:00  INFO 8648 --- [resenas] [main] liquibase.snapshot                       : Creating snapshot
+2026-06-19T19:51:57.453-04:00  WARN 8648 --- [resenas] [main] liquibase.lockservice                    : Failed to release change log lock
+2026-06-19T19:51:57.473-04:00  INFO 8648 --- [resenas] [main] liquibase.ui                             : All objects dropped from root@localhost@jdbc:mysql://localhost:3306/resenas?createDatabaseIfNotExist=true&serverTimezone=UTC
+2026-06-19T19:51:57.475-04:00  INFO 8648 --- [resenas] [main] liquibase.command                        : Command execution complete
+2026-06-19T19:51:57.610-04:00  INFO 8648 --- [resenas] [main] liquibase.changelog                      : Creating database changelog table with name: resenas.databasechangelog
+2026-06-19T19:51:57.634-04:00  INFO 8648 --- [resenas] [main] liquibase.changelog                      : Reading from resenas.databasechangelog
+2026-06-19T19:51:57.646-04:00  INFO 8648 --- [resenas] [main] liquibase.snapshot                       : Creating snapshot
+2026-06-19T19:51:57.669-04:00  INFO 8648 --- [resenas] [main] liquibase.ui                             : Name 'PK_DATABASECHANGELOGLOCK' ignored for PRIMARY key.
+2026-06-19T19:51:57.742-04:00  INFO 8648 --- [resenas] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2026-06-19T19:51:57.743-04:00  INFO 8648 --- [resenas] [main] liquibase.command                        : Using deploymentId: 1913113362
+2026-06-19T19:51:57.747-04:00  INFO 8648 --- [resenas] [main] liquibase.changelog                      : Reading from resenas.databasechangelog
+2026-06-19T19:51:57.773-04:00  INFO 8648 --- [resenas] [main] liquibase.ui                             : Running Changeset: db/changelog/db.resenas.sql::17::massi
+2026-06-19T19:51:57.807-04:00  INFO 8648 --- [resenas] [main] liquibase.changelog                      : Custom SQL executed
+2026-06-19T19:51:57.811-04:00  INFO 8648 --- [resenas] [main] liquibase.changelog                      : ChangeSet db/changelog/db.resenas.sql::17::massi ran successfully in 34ms
+2026-06-19T19:51:57.827-04:00  INFO 8648 --- [resenas] [main] liquibase.ui                             : Running Changeset: db/changelog/db.resenas.sql::18::massi
+2026-06-19T19:51:57.863-04:00  INFO 8648 --- [resenas] [main] liquibase.changelog                      : Custom SQL executed
+2026-06-19T19:51:57.889-04:00  INFO 8648 --- [resenas] [main] liquibase.changelog                      : ChangeSet db/changelog/db.resenas.sql::18::massi ran successfully in 61ms
+2026-06-19T19:51:57.923-04:00  INFO 8648 --- [resenas] [main] liquibase.util                           : UPDATE SUMMARY
+2026-06-19T19:51:57.923-04:00  INFO 8648 --- [resenas] [main] liquibase.util                           : Run:                          2
+2026-06-19T19:51:57.923-04:00  INFO 8648 --- [resenas] [main] liquibase.util                           : Previously run:               0
+2026-06-19T19:51:57.924-04:00  INFO 8648 --- [resenas] [main] liquibase.util                           : Filtered out:                 0
+2026-06-19T19:51:57.924-04:00  INFO 8648 --- [resenas] [main] liquibase.util                           : -------------------------------
+2026-06-19T19:51:57.924-04:00  INFO 8648 --- [resenas] [main] liquibase.util                           : Total change sets:            2
+2026-06-19T19:51:57.925-04:00  INFO 8648 --- [resenas] [main] liquibase.util                           : Update summary generated
+2026-06-19T19:51:57.929-04:00  INFO 8648 --- [resenas] [main] liquibase.command                        : Update command completed successfully.
+2026-06-19T19:51:57.930-04:00  INFO 8648 --- [resenas] [main] liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 10
+2026-06-19T19:51:57.943-04:00  INFO 8648 --- [resenas] [main] liquibase.lockservice                    : Successfully released change log lock
+2026-06-19T19:51:57.945-04:00  INFO 8648 --- [resenas] [main] liquibase.command                        : Command execution complete
+2026-06-19T19:51:58.164-04:00  INFO 8648 --- [resenas] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-19T19:51:58.288-04:00  INFO 8648 --- [resenas] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.19.Final
+2026-06-19T19:51:59.237-04:00  INFO 8648 --- [resenas] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-19T19:51:59.337-04:00  WARN 8648 --- [resenas] [main] org.hibernate.orm.core                   : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-19T19:51:59.362-04:00  INFO 8648 --- [resenas] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/resenas?createDatabaseIfNotExist=true&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: resenas/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-19T19:52:00.492-04:00  INFO 8648 --- [resenas] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-19T19:52:00.508-04:00  INFO 8648 --- [resenas] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-19T19:52:00.659-04:00  INFO 8648 --- [resenas] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-19T19:52:00.824-04:00  WARN 8648 --- [resenas] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-19T19:52:01.390-04:00  INFO 8648 --- [resenas] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8087 (http) with context path '/'
+2026-06-19T19:52:01.415-04:00  INFO 8648 --- [resenas] [main] com.resenas.resenas.ResenasApplication   : Started ResenasApplication in 11.818 seconds (process running for 12.515)
+2026-06-19T19:52:59.083-04:00  INFO 8648 --- [resenas] [http-nio-8087-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-19T19:52:59.084-04:00  INFO 8648 --- [resenas] [http-nio-8087-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-19T19:52:59.090-04:00  INFO 8648 --- [resenas] [http-nio-8087-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
