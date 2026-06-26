@@ -2,7 +2,6 @@ package com.resenas.resenas.service;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.resenas.resenas.model.Resenas;
@@ -11,7 +10,6 @@ import com.resenas.resenas.repository.ResenasRepository;
 @Service
 public class ResenasService {
 
-    @Autowired
     private ResenasRepository resenasRepository;
 
     public List<Resenas> listarResenas() {
