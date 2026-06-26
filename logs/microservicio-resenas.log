@@ -1,0 +1,85 @@
+2026-06-25T21:56:00.343-04:00  INFO 20376 --- [resenas] [main] c.r.r.controller.ResenasControllerTest   : Starting ResenasControllerTest using Java 21.0.10 with PID 20376 (started by dynabook in C:\Users\dynabook\Desktop\BiblioMusic\resenas)
+2026-06-25T21:56:00.355-04:00 DEBUG 20376 --- [resenas] [main] c.r.r.controller.ResenasControllerTest   : Running with Spring Boot v4.0.7, Spring v7.0.8
+2026-06-25T21:56:00.357-04:00  INFO 20376 --- [resenas] [main] c.r.r.controller.ResenasControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2026-06-25T21:56:02.759-04:00  INFO 20376 --- [resenas] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-06-25T21:56:02.761-04:00  INFO 20376 --- [resenas] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-06-25T21:56:02.766-04:00  INFO 20376 --- [resenas] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+2026-06-25T21:56:02.811-04:00  INFO 20376 --- [resenas] [main] c.r.r.controller.ResenasControllerTest   : Started ResenasControllerTest in 2.858 seconds (process running for 4.023)
+2026-06-25T21:56:02.945-04:00  INFO 20376 --- [resenas] [main] c.r.r.controller.ResenasController       : Obteniendo todas las resenas
+2026-06-25T21:56:03.386-04:00  INFO 20376 --- [resenas] [main] c.r.r.controller.ResenasController       : Creando resena
+2026-06-25T21:56:03.415-04:00  INFO 20376 --- [resenas] [main] c.r.r.controller.ResenasController       : Eliminando resena con id: 1
+2026-06-25T21:56:03.442-04:00  INFO 20376 --- [resenas] [main] c.r.r.controller.ResenasController       : Actualizando resena con id: 1
+2026-06-25T21:56:03.458-04:00  INFO 20376 --- [resenas] [main] c.r.r.controller.ResenasController       : Obteniendo resena con id: 1
+2026-06-25T21:56:03.484-04:00  INFO 20376 --- [resenas] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.resenas.resenas.ResenasApplicationTests]: ResenasApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-25T21:56:03.546-04:00  INFO 20376 --- [resenas] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.resenas.resenas.ResenasApplication for test class com.resenas.resenas.ResenasApplicationTests
+2026-06-25T21:56:03.550-04:00  INFO 20376 --- [resenas] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.resenas.resenas.ResenasApplicationTests]: ResenasApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-25T21:56:03.551-04:00  INFO 20376 --- [resenas] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.resenas.resenas.ResenasApplication for test class com.resenas.resenas.ResenasApplicationTests
+2026-06-25T21:56:03.620-04:00  INFO 20376 --- [resenas] [main] c.r.resenas.ResenasApplicationTests      : Starting ResenasApplicationTests using Java 21.0.10 with PID 20376 (started by dynabook in C:\Users\dynabook\Desktop\BiblioMusic\resenas)
+2026-06-25T21:56:03.620-04:00 DEBUG 20376 --- [resenas] [main] c.r.resenas.ResenasApplicationTests      : Running with Spring Boot v4.0.7, Spring v7.0.8
+2026-06-25T21:56:03.621-04:00  INFO 20376 --- [resenas] [main] c.r.resenas.ResenasApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2026-06-25T21:56:04.155-04:00  INFO 20376 --- [resenas] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-25T21:56:04.201-04:00  INFO 20376 --- [resenas] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 1 JPA repository interface.
+2026-06-25T21:56:04.481-04:00  INFO 20376 --- [resenas] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-25T21:56:04.689-04:00  INFO 20376 --- [resenas] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e1d813a
+2026-06-25T21:56:04.691-04:00  INFO 20376 --- [resenas] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-25T21:56:06.264-04:00  INFO 20376 --- [resenas] [main] liquibase.ui                             : INFO: The drop-all command may result in unrecoverable destructive changes to objects at 'jdbc:mysql://localhost:3306/resenas?createDatabaseIfNotExist=true&serverTimezone=UTC'.
+To protect against unwanted drops, set --requireForce=true, which will require a --force=true flag on the command.
+Learn more at https://docs.liquibase.com/dropall.
+
+2026-06-25T21:56:06.400-04:00  INFO 20376 --- [resenas] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2026-06-25T21:56:06.408-04:00  INFO 20376 --- [resenas] [main] liquibase.command                        : Dropping Database Objects in schema: resenas.resenas
+2026-06-25T21:56:06.414-04:00  INFO 20376 --- [resenas] [main] liquibase.snapshot                       : Creating snapshot
+2026-06-25T21:56:06.850-04:00  INFO 20376 --- [resenas] [main] liquibase.database                       : Successfully deleted all supported object types in schema resenas.resenas.
+2026-06-25T21:56:06.853-04:00  INFO 20376 --- [resenas] [main] liquibase.snapshot                       : Creating snapshot
+2026-06-25T21:56:06.857-04:00  WARN 20376 --- [resenas] [main] liquibase.lockservice                    : Failed to release change log lock
+2026-06-25T21:56:06.858-04:00  INFO 20376 --- [resenas] [main] liquibase.ui                             : All objects dropped from root@localhost@jdbc:mysql://localhost:3306/resenas?createDatabaseIfNotExist=true&serverTimezone=UTC
+2026-06-25T21:56:06.859-04:00  INFO 20376 --- [resenas] [main] liquibase.command                        : Command execution complete
+2026-06-25T21:56:06.922-04:00  INFO 20376 --- [resenas] [main] liquibase.changelog                      : Creating database changelog table with name: resenas.databasechangelog
+2026-06-25T21:56:06.942-04:00  INFO 20376 --- [resenas] [main] liquibase.changelog                      : Reading from resenas.databasechangelog
+2026-06-25T21:56:06.949-04:00  INFO 20376 --- [resenas] [main] liquibase.snapshot                       : Creating snapshot
+2026-06-25T21:56:07.307-04:00  INFO 20376 --- [resenas] [main] liquibase.ui                             : Name 'PK_DATABASECHANGELOGLOCK' ignored for PRIMARY key.
+2026-06-25T21:56:07.346-04:00  INFO 20376 --- [resenas] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2026-06-25T21:56:07.347-04:00  INFO 20376 --- [resenas] [main] liquibase.command                        : Using deploymentId: 2438964462
+2026-06-25T21:56:07.349-04:00  INFO 20376 --- [resenas] [main] liquibase.changelog                      : Reading from resenas.databasechangelog
+2026-06-25T21:56:07.359-04:00  INFO 20376 --- [resenas] [main] liquibase.ui                             : Running Changeset: db/changelog/db.resenas.sql::17::massi
+2026-06-25T21:56:07.381-04:00  INFO 20376 --- [resenas] [main] liquibase.changelog                      : Custom SQL executed
+2026-06-25T21:56:07.383-04:00  INFO 20376 --- [resenas] [main] liquibase.changelog                      : ChangeSet db/changelog/db.resenas.sql::17::massi ran successfully in 22ms
+2026-06-25T21:56:07.390-04:00  INFO 20376 --- [resenas] [main] liquibase.ui                             : Running Changeset: db/changelog/db.resenas.sql::18::massi
+2026-06-25T21:56:07.400-04:00  INFO 20376 --- [resenas] [main] liquibase.changelog                      : Custom SQL executed
+2026-06-25T21:56:07.403-04:00  INFO 20376 --- [resenas] [main] liquibase.changelog                      : ChangeSet db/changelog/db.resenas.sql::18::massi ran successfully in 13ms
+2026-06-25T21:56:07.414-04:00  INFO 20376 --- [resenas] [main] liquibase.util                           : UPDATE SUMMARY
+2026-06-25T21:56:07.414-04:00  INFO 20376 --- [resenas] [main] liquibase.util                           : Run:                          2
+2026-06-25T21:56:07.415-04:00  INFO 20376 --- [resenas] [main] liquibase.util                           : Previously run:               0
+2026-06-25T21:56:07.415-04:00  INFO 20376 --- [resenas] [main] liquibase.util                           : Filtered out:                 0
+2026-06-25T21:56:07.415-04:00  INFO 20376 --- [resenas] [main] liquibase.util                           : -------------------------------
+2026-06-25T21:56:07.415-04:00  INFO 20376 --- [resenas] [main] liquibase.util                           : Total change sets:            2
+2026-06-25T21:56:07.416-04:00  INFO 20376 --- [resenas] [main] liquibase.util                           : Update summary generated
+2026-06-25T21:56:07.419-04:00  INFO 20376 --- [resenas] [main] liquibase.command                        : Update command completed successfully.
+2026-06-25T21:56:07.419-04:00  INFO 20376 --- [resenas] [main] liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 10
+2026-06-25T21:56:07.422-04:00  INFO 20376 --- [resenas] [main] liquibase.lockservice                    : Successfully released change log lock
+2026-06-25T21:56:07.423-04:00  INFO 20376 --- [resenas] [main] liquibase.command                        : Command execution complete
+2026-06-25T21:56:07.538-04:00  INFO 20376 --- [resenas] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-25T21:56:07.618-04:00  INFO 20376 --- [resenas] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.19.Final
+2026-06-25T21:56:07.933-04:00  INFO 20376 --- [resenas] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-25T21:56:07.984-04:00  WARN 20376 --- [resenas] [main] org.hibernate.orm.core                   : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-25T21:56:08.004-04:00  INFO 20376 --- [resenas] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/resenas?createDatabaseIfNotExist=true&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: resenas/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-25T21:56:08.605-04:00  INFO 20376 --- [resenas] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-25T21:56:08.611-04:00  INFO 20376 --- [resenas] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-25T21:56:08.714-04:00  INFO 20376 --- [resenas] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-25T21:56:08.927-04:00  WARN 20376 --- [resenas] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-25T21:56:09.296-04:00  INFO 20376 --- [resenas] [main] c.r.resenas.ResenasApplicationTests      : Started ResenasApplicationTests in 5.738 seconds (process running for 10.509)
+2026-06-25T21:56:09.298-04:00  WARN 20376 --- [resenas] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-25T21:56:09.508-04:00  INFO 20376 --- [resenas] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-25T21:56:09.510-04:00  INFO 20376 --- [resenas] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-25T21:56:09.517-04:00  INFO 20376 --- [resenas] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

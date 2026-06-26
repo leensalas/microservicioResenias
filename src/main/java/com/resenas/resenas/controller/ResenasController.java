@@ -1,8 +1,12 @@
 package com.resenas.resenas.controller;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.hateoas.CollectionModel;
+import org.springframework.hateoas.EntityModel;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,56 +17,66 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.resenas.resenas.assembler.ResenasAssembler;
 import com.resenas.resenas.model.Resenas;
 import com.resenas.resenas.service.ResenasService;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @RestController
 @RequestMapping("/resenas")
 public class ResenasController {
 
-    @Autowired
-    private ResenasService resenasService;
+    private final ResenasService resenasService;
+    private final ResenasAssembler resenasAssembler;
 
-    @GetMapping
-    public List<Resenas> listarResenas() {
-        return resenasService.listarResenas();
+    public ResenasController(ResenasService resenasService, ResenasAssembler resenasAssembler) {
+        this.resenasService = resenasService;
+        this.resenasAssembler = resenasAssembler;
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<Resenas> buscarPorId(@PathVariable Long id) {
-        Resenas resena = resenasService.buscarPorId(id);
+    @GetMapping
+    public CollectionModel<EntityModel<Resenas>> listarResenas() {
+        log.info("Obteniendo todas las resenas");
+        List<EntityModel<Resenas>> resenas = resenasService.listarResenas().stream()
+                .map(resenasAssembler::toModel)
+                .collect(Collectors.toList());
+        CollectionModel<EntityModel<Resenas>> collectionModel = CollectionModel.of(resenas,
+                linkTo(methodOn(ResenasController.class).listarResenas()).withSelfRel());
+        collectionModel.add(
+                linkTo(methodOn(ResenasController.class).crearResena(null)).withRel("crear resena").withType("POST"));
 
-        if (resena == null) {
-            return ResponseEntity.notFound().build();
-        }
+        return collectionModel;
+    }
 
-        return ResponseEntity.ok(resena);
+    @GetMapping("/{idResena}")
+    public EntityModel<Resenas> buscarPorId(@PathVariable Long idResena) {
+        log.info("Obteniendo resena con id: " + idResena);
+        Resenas resena = resenasService.buscarPorId(idResena);
+        EntityModel<Resenas> modelo = resenasAssembler.toModel(resena);
+        modelo.add(
+                linkTo(methodOn(ResenasController.class).listarResenas()).withRel("Todas las resenas").withType("GET"));
+        return modelo;
     }
 
     @PostMapping
-    public Resenas crearResena(@RequestBody Resenas resena) {
-        return resenasService.crearResena(resena);
+    public ResponseEntity<EntityModel<Resenas>> crearResena(@RequestBody Resenas resena) {
+        log.info("Creando resena");
+        return ResponseEntity.ok(resenasAssembler.toModel(resenasService.crearResena(resena)));
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<Resenas> actualizarResena(@PathVariable Long id, @RequestBody Resenas resena) {
-        Resenas resenaActualizada = resenasService.actualizarResena(id, resena);
-
-        if (resenaActualizada == null) {
-            return ResponseEntity.notFound().build();
-        }
-
-        return ResponseEntity.ok(resenaActualizada);
+    @PutMapping("/{idResena}")
+    public ResponseEntity<EntityModel<Resenas>> actualizarResena(@PathVariable Long idResena,
+            @RequestBody Resenas resena) {
+        log.info("Actualizando resena con id: " + idResena);
+        return ResponseEntity.ok(resenasAssembler.toModel(resenasService.actualizarResena(idResena, resena)));
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<String> eliminarResena(@PathVariable Long id) {
-        boolean eliminado = resenasService.eliminarResena(id);
-
-        if (!eliminado) {
-            return ResponseEntity.notFound().build();
-        }
-
-        return ResponseEntity.ok("Reseña eliminada correctamente");
+    @DeleteMapping("/{idResena}")
+    public ResponseEntity<Void> eliminarResena(@PathVariable Long idResena) {
+        log.info("Eliminando resena con id: " + idResena);
+        resenasService.eliminarResena(idResena);
+        return ResponseEntity.noContent().build();
     }
 }
